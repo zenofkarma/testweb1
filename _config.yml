@@ -1,0 +1,66 @@
+# Site
+name: "Zenpy"
+title: "Zenpy"
+description: "Thinking"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+url: https://zenpy.ml
+enforce_ssl: zenpy.ml
+baseurl: ""
+google_analytics: ''
+disqus: 'zenpy'
+mailchimp-list: 'https://gmail.us20.list-manage.com/subscribe/post?u=d0aafe8fa3cff56097804a3eb&amp;id=5c48336b79'
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  zenpy:
+    name: Zenpy
+    display_name: Zenpy
+    avatar: 'assets/images/avatar.png'
+    gravatar: 2c3f30e84d1f0cbdcd69f25e1ffc8668
+    email:
+    web: https://www.zenpy.ml
+    twitter: https://www.zenpy.ml
+    description: "So complicated"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: ""
+adsense-data-ad-slot: ""
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "enabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
