@@ -82,9 +82,9 @@ ga('send', 'pageview');
 
                 <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/categories">Categories</a>
-                <div>
+                <div class="dropdown-menu" aria-labelledby="dropdown02">
                 {% for category in site.categories %}
-                <a href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"><span class="text-capitalize" style="color: black">{{ category[0] }}</span></a></li>
+                <a class="dropdown-item" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"><span class="text-capitalize" style="color: black">{{ category[0] }}</span></a></li>
                 {% endfor %}
                 </div>
                 </li>
