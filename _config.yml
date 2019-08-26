@@ -11,7 +11,7 @@ google_analytics: ''
 disqus: 'zenpy'
 mailchimp-list: 'https://gmail.us20.list-manage.com/subscribe/post?u=d0aafe8fa3cff56097804a3eb&amp;id=5c48336b79'
 include: ["_pages"]
-permalink:'/:title/'
+permalink:  /:title/
 
 # Authors
 authors:
@@ -38,7 +38,7 @@ jekyll-archives:
   enabled:
     - categories
   layout: archive
-  permalinks: '/:title/'
+  permalinks:
     category: '/category/:name/'
     
 # Pagination 
