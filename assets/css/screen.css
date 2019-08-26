@@ -282,6 +282,12 @@ span.post-read-more a:hover {
     font-weight: 500;
 }
 
+.dropdown-item:hover {
+    color: #1d1e1f;
+    text-decoration: none;
+    background-color: #f7f7f9;
+}
+
 .dropdown-item {
     display: block;
     width: 100%;
