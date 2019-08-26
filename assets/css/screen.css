@@ -282,10 +282,21 @@ span.post-read-more a:hover {
     font-weight: 500;
 }
 
-.mediumnavigation .dropdown-menu {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    margin: .5rem 0 0;
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 7px 1.5rem;
 }
+
+.mediumnavigation .nav-item,.dropdown-menu {
+	font-size:0.9rem;
+}
+
+.mediumnavigation .dropdown-menu {
+        margin:0 0 15px 0;
+        box-shadow:none;
+        border:0;
+ }
 
 .mediumnavigation .nav-item,
 .dropdown-menu {
