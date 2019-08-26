@@ -283,15 +283,9 @@ span.post-read-more a:hover {
 }
 
 .mediumnavigation .dropdown-menu {
-        margin:0 0 15px 0;
-        box-shadow:none;
-        border:0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    margin: .5rem 0 0;
 }
-
-.dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 7px 1.5rem;
 
 .mediumnavigation .nav-item,
 .dropdown-menu {
@@ -308,23 +302,6 @@ span.post-read-more a:hover {
 .mediumnavigation .navbar-brand img {
     max-height: 30px;
     margin-right: 5px;
-}
-
-#navbarMediumish ul ul{
-    display: None;
-}
-#navbarMediumish ul li:hover ul{
-    display: block;
-    position: absolute;
-}
-#navbarMediumish ul li ul li{
-    display: block;
-}
-#navbarMediumish ul li ul li:hover{
-    background-color: #1C9963;
-}
-#navbarMediumish ul li a:hover{
-color: #1C9963;
 }
 
 .mainheading h1.sitetitle {
