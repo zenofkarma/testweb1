@@ -287,6 +287,11 @@ span.post-read-more a:hover {
     margin: .5rem 0 0;
 }
 
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 7px 1.5rem;
+
 .mediumnavigation .nav-item,
 .dropdown-menu {
     font-size: 0.9rem;
