@@ -82,11 +82,11 @@ ga('send', 'pageview');
 
                 <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/categories">Categories</a>
-                <ul>
+                <div>
                 {% for category in site.categories %}
                 <li><a href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"><span class="text-capitalize" style="color: black">{{ category[0] }}</span></a></li>
                 {% endfor %}
-                </ul>
+                </div>
                 </li>
 
                 {% include search-lunr.html %}
