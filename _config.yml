@@ -38,7 +38,7 @@ jekyll-archives:
   enabled:
     - categories
   layout: archive
-  permalinks:
+  permalinks: '/:title/'
     category: '/category/:name/'
     
 # Pagination 
