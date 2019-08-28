@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
-
-<title>{{ page.title }} | {{site.name}}</title>
-
-{% seo %}
-
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-<link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
-
-<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
-
-<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+        
+        <title>{{ page.title }} | {{site.name}}</title>
+        
+        {% seo %}
+        
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/cssjsthem/bootstrap.min.css">
+            
+        <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
+        
+        <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+        
+        <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+        
+        </head>
 
 {% if jekyll.environment == 'production' %}
 <!-- change your GA id in _config.yml -->
@@ -68,25 +68,20 @@ ga('send', 'pageview');
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
+                <a class="nav-link" href="{{ site.baseurl }}/">Blog</a>
                 </li>
-		    
-		<li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Post</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="{{site.baseurl }}/zenpy.ml/test-2-test/">Left Sidebar</a>
-                <a class="dropdown-item" href="{{site.baseurl }}/jekyll/tutorial/2018/01/12/red-riding.html">Right Sidebar</a>
-                </div>
-			
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-wordpress-simple"></i> Post</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    {% for category in site.categories %}
+                    <a class="dropdown-item" href="{{site.baseurl}}/categories/{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | capitalize }}</a>
+                    {% endfor %}
+                    </div>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/categories">Categories</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown02">
-                {% for category in site.categories %}
-                <a class="dropdown-item" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}"><span class="text-capitalize" style="color: black">{{ category[0] }}</span></a></li>
-                {% endfor %}
-                </div>
+                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                 </li>
 
                 {% include search-lunr.html %}
@@ -152,11 +147,11 @@ ga('send', 'pageview');
             {% assign categories_list = site.categories %}
             {% if categories_list.first[0] == null %}
                 {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories/{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
                 {% endfor %}
             {% else %}
                 {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories/{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
                 {% endfor %}
             {% endif %}
             {% assign categories_list = nil %}
@@ -186,9 +181,9 @@ ga('send', 'pageview');
 <!-- Scripts
 ================================================== -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/assets/cssjsthem/popper.min.js"></script>
 
-<script src="{{ site.baseurl }}/assets/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/assets/cssjsthem/bootstrap.min.js"></script>
 
 <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
 
