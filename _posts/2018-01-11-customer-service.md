@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Inception Movie"
+title:  "Inception Movie Test"
 author: john
 categories: [ jekyll, tutorial ]
 image: assets/images/11.jpg
